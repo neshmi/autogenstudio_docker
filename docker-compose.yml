@@ -1,0 +1,36 @@
+services:
+  autogenstudio:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: autogenstudio
+    ports:
+      - "8081:8081"
+    volumes:
+      - ./app:/home/user/app
+  #   environment:
+  #     - AGS_DB_HOST=database
+  #     - AGS_DB_PORT=5432
+  #     - AGS_DB_NAME=autogenstudio
+  #     - AGS_DB_USER=autogenstudio
+  #     - AGS_DB_PASSWORD=autogenstudio
+  #   depends_on:
+  #     - database
+  #   # networks:
+  #   #   - autogenstudio
+  # database:
+  #   image: postgres:12
+  #   container_name: database
+  #   ports:
+  #     - "5432:5432"
+  #   environment:
+  #     POSTGRES_USER: autogenstudio
+  #     POSTGRES_PASSWORD: autogenstudio
+  #     POSTGRES_DB: autogenstudio
+  #   # networks:
+  #   #   - autogenstudio
+  #   volumes:
+  #     - ./database:/var/lib/postgresql/data
+  #   restart: always
+  #   # networks:
+  #   #   - autogenstudio
