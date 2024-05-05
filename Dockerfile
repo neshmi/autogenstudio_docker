@@ -2,9 +2,9 @@ FROM python:3.10
 
 WORKDIR /code
 
-RUN pip install -U gunicorn "autogenstudio==0.0.56"
+RUN pip install -U gunicorn "autogenstudio==0.2.27"
 
-RUN useradd -m -u 1000 user
+RUN useradd -m -u 1000 userdd
 USER user
 ENV HOME=/home/user \
     PATH=/home/user/.local/bin:$PATH \

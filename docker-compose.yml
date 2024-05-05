@@ -3,6 +3,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    image: ghcr.io/neshmi/autogenstudio_docker:latest
     container_name: autogenstudio
     ports:
       - "8081:8081"
